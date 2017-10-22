@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <title>Canvas masking</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="public/styles/style.css">
+</head>
+<body>
+
+<div data-target="canvas-container" class="canvas-container">
+  <div data-target="actions" class="actions" style="display: none;">
+    <div data-action="exit">
+      <i class="fa fa-times"></i>
+    </div>
+  </div>
+  <div data-target="frame-options" class="frame-options">
+    <div class="options">
+      <div data-target="frame-option" class="option selected">
+        <img class="mask" src="public/images/puppet.png">
+      </div>
+      <div data-target="frame-option" class="option">
+        <img class="mask" src="public/images/puppetgirl.svg">
+      </div>
+    </div>
+    <button data-action="selectFrame">Start coloring</button>
+  </div>
+  <canvas data-target="canvas"></canvas>
+  <div data-target="tools" class="tools" style="display: none;">
+
+    <div class="stroke-options">
+      <div class="option option-1 selected" data-stroke="1">
+        <div></div>
+      </div>
+      <div class="option option-2" data-stroke="2">
+        <div></div>
+      </div>
+      <div class="option option-3" data-stroke="4">
+        <div></div>
+      </div>
+      <div class="option option-4" data-stroke="8">
+        <div></div>
+      </div>
+      <div class="option option-5" data-stroke="16">
+        <div></div>
+      </div>
+    </div>
+
+    <div class="tools-options">
+      <div class="option selected"><i class="fa fa-pencil"></i></div>
+      <div class="option disabled"><i class="fa fa-circle-thin"></i></div>
+      <div class="option disabled"><i class="fa fa-square-o"></i></div>
+    </div>
+
+    <div class="color-options">
+      <div class="option option-1 selected" data-color="black">
+        <div></div>
+      </div>
+      <div class="option option-2" data-color="white">
+        <div></div>
+      </div>
+      <div class="option option-3" data-color="yellow">
+        <div></div>
+      </div>
+      <div class="option option-4" data-color="cornflowerblue">
+        <div></div>
+      </div>
+      <div class="option option-5" data-color="orangered">
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="public/js/script.js" charset="utf-8"></script>
+</body>
+</html>

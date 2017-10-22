@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  background: lightblue;
+  padding-top: 60px; }
+
+.canvas-container {
+  height: 400px;
+  background: #efefef;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid lightgrey; }
+  .canvas-container .actions {
+    position: absolute;
+    display: flex;
+    right: 1px;
+    top: 1px; }
+    .canvas-container .actions > div {
+      transition: .2s;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border: 1px solid lightgrey;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer; }
+      .canvas-container .actions > div:hover {
+        transform: scale(1.3); }
+      .canvas-container .actions > div:not(:last-child) {
+        margin-right: 1px; }
+      .canvas-container .actions > div i {
+        font-size: 10px; }
+  .canvas-container .frame-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .canvas-container .frame-options .options {
+      display: flex;
+      margin-bottom: 20px; }
+      .canvas-container .frame-options .options .option {
+        transition: .3s;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0);
+        border: 1px solid transparent;
+        cursor: pointer; }
+        .canvas-container .frame-options .options .option.selected {
+          border-color: #3bb4dc;
+          background: rgba(0, 0, 0, 0.05); }
+        .canvas-container .frame-options .options .option:not(:last-child) {
+          margin-right: 20px; }
+        .canvas-container .frame-options .options .option:hover {
+          transform: scale(1.1); }
+        .canvas-container .frame-options .options .option img {
+          width: 100px; }
+    .canvas-container .frame-options button {
+      transition: .2s;
+      background: #3bb4dc;
+      border: 0;
+      padding: 5px 10px;
+      color: white;
+      outline: 0;
+      cursor: pointer; }
+      .canvas-container .frame-options button:hover {
+        transform: scale(1.1); }
+  .canvas-container canvas {
+    display: none; }
+
+.tools {
+  position: absolute;
+  display: flex;
+  bottom: -10px; }
+  .tools > div {
+    display: flex;
+    align-items: center; }
+    .tools > div:not(:last-child) {
+      margin-right: 10px; }
+    .tools > div .option, .tools > div .tool-icon {
+      transition: .2s;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border: 1px solid lightgrey;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .tools > div .option {
+      cursor: pointer; }
+      .tools > div .option.selected {
+        border: 1px solid #3bb4dc;
+        transform: scale(1.2); }
+      .tools > div .option.disabled {
+        color: lightgrey;
+        cursor: default; }
+      .tools > div .option:hover:not(.disabled) {
+        transform: scale(1.4);
+        z-index: 1; }
+      .tools > div .option:not(:last-child) {
+        margin-right: 1px; }
+    .tools > div.stroke-options .option div {
+      border-radius: 50%;
+      background: black; }
+    .tools > div.stroke-options .option.option-1 div {
+      width: 2px;
+      height: 2px; }
+    .tools > div.stroke-options .option.option-2 div {
+      width: 4px;
+      height: 4px; }
+    .tools > div.stroke-options .option.option-3 div {
+      width: 6px;
+      height: 6px; }
+    .tools > div.stroke-options .option.option-4 div {
+      width: 8px;
+      height: 8px; }
+    .tools > div.stroke-options .option.option-5 div {
+      width: 10px;
+      height: 10px; }
+    .tools > div.color-options .option div {
+      border-radius: 4px;
+      width: 12px;
+      height: 12px;
+      border: 1px solid white; }
+    .tools > div.color-options .option.option-1 div {
+      background: black; }
+    .tools > div.color-options .option.option-2 div {
+      background: white;
+      border-color: lightgrey; }
+    .tools > div.color-options .option.option-3 div {
+      background: yellow; }
+    .tools > div.color-options .option.option-4 div {
+      background: cornflowerblue; }
+    .tools > div.color-options .option.option-5 div {
+      background: orangered; }
+
+/*# sourceMappingURL=style.css.map */
